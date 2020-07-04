@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => {
 
 function NewLogin() {
   const StyledWrapper = styled.div`
-  .secondary-line {
+  .secondary-line{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
     background: -webkit-linear-gradient(
