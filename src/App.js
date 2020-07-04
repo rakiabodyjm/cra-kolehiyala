@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {
+  createMuiTheme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from '@material-ui/core/styles'
+import Login from './pages/Login'
 
 function App() {
+  const theme = responsiveFontSizes(
+    createMuiTheme({
+      palette: {
+        primary: {
+          light: '#ffc7c7',
+          main: '#ea9696',
+          dark: '#b66768',
+          contrastText: '#000000',
+        },
+        secondary: {
+          light: '#8654ff',
+          main: '#3f21ff',
+          dark: '#0000ca',
+          contrastText: '#ffffff',
+        },
+        text: {
+          primary: 'rgba(0,0,0, 1.00)',
+          secondary: 'rgba(0,0,0, 0.75)',
+          primaryPurple: '#2F1AA6',
+
+          // secondary: "red",
+        },
+      },
+    }),
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <Login />
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
