@@ -12,7 +12,8 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "jsx-a11y"],
+  // "plugins": ["react", "jsx-a11y"],
+  // "plugins": ["prettier", "react"],
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
 

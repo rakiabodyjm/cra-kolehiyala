@@ -1,9 +1,7 @@
 import React from 'react'
-import {
-  createMuiTheme,
-  ThemeProvider,
-  responsiveFontSizes,
-} from '@material-ui/core/styles'
+import { createMuiTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core/styles'
+
+import { CssBaseline } from '@material-ui/core'
 import Login from './pages/Login'
 
 function App() {
@@ -30,11 +28,15 @@ function App() {
           // secondary: "red",
         },
       },
-    }),
+      typography: {
+        fontFamily: 'Montserrat, Roboto, Helvetica, Arial, sans-serif',
+      },
+    })
   )
 
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <Login />
     </ThemeProvider>
   )
